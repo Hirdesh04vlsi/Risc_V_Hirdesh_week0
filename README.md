@@ -1,7 +1,7 @@
 
 # RISC-V Hirdesh Week 0 🚀
 
-This repository is a part of the **VSD RISC-V "Silicon to Tapeout" program** by **Hirdesh Pamnani** (4th Year, ECE, JSSATEN).  
+This repository is a part of the **VSD RISC-V "Silicon to Tapeout" program** by **VSD** and **Kunal Ghosh** sir.  
 It documents my learning journey towards designing, verifying, and taping out a RISC-V based chip.
 
 ---
