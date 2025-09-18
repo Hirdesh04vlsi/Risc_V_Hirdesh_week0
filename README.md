@@ -24,7 +24,6 @@ Risc_V_Hirdesh_week0/
 │
 ├── README.md   <- main documentation
 ├── tools/      <- screenshots of tool installations (to be added later)
-└── summary/    <- notes & learnings (week-wise)
 ```
 
 ---
@@ -45,47 +44,20 @@ Risc_V_Hirdesh_week0/
    - Gate-level netlist generated and synthesized.  
    - Floorplanning, placement, CTS, and routing lead to GDSII.  
    - DRC/LVS checks ensure manufacturability.  
+<img width="916" height="546" alt="Screenshot 2025-09-19 005757" src="https://github.com/user-attachments/assets/fa24f645-004c-4796-bd84-d1967bda90a6" />
 
 4. **Final Verification (O4)**  
    - At the end, outputs O1 = O2 = O3 = O4 must be consistent.  
    - This validates that chip implementation matches initial specifications.  
+<img width="839" height="485" alt="Screenshot 2025-09-19 005848" src="https://github.com/user-attachments/assets/34a08d24-d4ef-4ff6-9043-a7a2f66ccf5b" />
 
 📌 Key Learning: The **testbench is always in C language**, and the **SoC design flow ensures correctness from spec → RTL → synthesis → GDSII**.
 
 ---
-
-## 🛠️ Tools Installation 
-
-### 1. Yosys (Synthesis Tool)
-```bash
-$ sudo apt-get update
-$ git clone https://github.com/YosysHQ/yosys.git
-$ cd yosys
-$ sudo apt install make build-essential clang bison flex \
-    libreadline-dev gawk tcl-dev libffi-dev git \
-    graphviz xdot pkg-config python3 libboost-system-dev \
-    libboost-python-dev libboost-filesystem-dev zlib1g-dev
-$ make config-gcc
-$ make
-$ sudo make install
-````
-
-### 2. Icarus Verilog (Simulation Tool)
-
-```bash
-$ sudo apt-get update
-$ sudo apt-get install iverilog
-```
-
-### 3. GTKWave (Waveform Viewer)
-
-```bash
-$ sudo apt-get update
-$ sudo apt install gtkwave
-```
 
 ## 📌 Author
 
 **Hirdesh Pamnani**
 4th Year, Electronics & Communication Engineering
 JSS Academy of Technical Education, Noida
+mail: hirdeshpamani2@gmail.com
