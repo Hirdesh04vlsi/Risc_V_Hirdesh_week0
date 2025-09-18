@@ -23,7 +23,6 @@ RISC-V is an **open-source Instruction Set Architecture (ISA)**, widely adopted 
 Risc_V_Hirdesh_week0/
 │
 ├── README.md   <- main documentation
-├── tools/      <- screenshots of tool installations (to be added later)
 ```
 
 ---
@@ -54,6 +53,41 @@ Risc_V_Hirdesh_week0/
 📌 Key Learning: The **testbench is always in C language**, and the **SoC design flow ensures correctness from spec → RTL → synthesis → GDSII**.
 
 ---
+
+## 🛠️ Tools Installation 
+
+### 1. Yosys (Synthesis Tool)
+```bash
+$ sudo apt-get update
+$ git clone https://github.com/YosysHQ/yosys.git
+$ cd yosys
+$ sudo apt install make build-essential clang bison flex \
+    libreadline-dev gawk tcl-dev libffi-dev git \
+    graphviz xdot pkg-config python3 libboost-system-dev \
+    libboost-python-dev libboost-filesystem-dev zlib1g-dev
+$ make config-gcc
+$ make
+$ sudo make install
+````
+<img width="1060" height="609" alt="Screenshot 2025-09-19 013924" src="https://github.com/user-attachments/assets/78556417-09ae-48f5-93dd-151567ac52d2" />
+
+### 2. Icarus Verilog (Simulation Tool)
+
+```bash
+$ sudo apt-get update
+$ sudo apt-get install iverilog
+```
+<img width="1104" height="360" alt="Screenshot 2025-09-19 013939" src="https://github.com/user-attachments/assets/041af9af-9660-42f9-a8ef-b6a68c47e247" />
+
+### 3. GTKWave (Waveform Viewer)
+
+```bash
+$ sudo apt-get update
+$ sudo apt install gtkwave
+```
+<img width="862" height="124" alt="Screenshot 2025-09-19 014213" src="https://github.com/user-attachments/assets/ca8a6774-0256-4e23-ab9e-c24d90acf6c2" />
+<img width="2015" height="1339" alt="image" src="https://github.com/user-attachments/assets/0cefece2-8d49-4c75-aec7-5424621d0134" />
+
 
 ## 📌 Author
 
