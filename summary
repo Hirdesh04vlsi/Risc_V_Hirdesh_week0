@@ -1,0 +1,25 @@
+## 📺 Week 0 – Learnings
+
+### 🔹 Video Summary 
+1. **Chip Modeling (O1)**  
+   - Initial specification done using C model.  
+   - Testbench written in C language for functional validation.  
+
+2. **RTL Architecture (O2)**  
+   - Soft copy of hardware created in RTL (Verilog).  
+   - Processor, peripherals/IPs, macros, and analog IPs are modeled.  
+   
+3. **SoC Integration (O3)**  
+   - Components like Processor, GPIOs, and IPs are integrated at SoC level.  
+   - Gate-level netlist generated and synthesized.  
+   - Floorplanning, placement, CTS, and routing lead to GDSII.  
+   - DRC/LVS checks ensure manufacturability.  
+
+4. **Final Verification (O4)**  
+   - At the end, outputs O1 = O2 = O3 = O4 must be consistent.  
+   - This validates that chip implementation matches initial specifications.  
+
+📌 Key Learning: The **SoC design flow ensures correctness from spec → RTL → synthesis → GDSII**.
+
+
+
