@@ -88,6 +88,76 @@ $ sudo apt install gtkwave
 <img width="862" height="124" alt="Screenshot 2025-09-19 014213" src="https://github.com/user-attachments/assets/ca8a6774-0256-4e23-ab9e-c24d90acf6c2" />
 <img width="2015" height="1339" alt="image" src="https://github.com/user-attachments/assets/0cefece2-8d49-4c75-aec7-5424621d0134" />
 
+### 4. Ngspice (Circuit Simulation)
+
+```bash
+$ wget https://sourceforge.net/projects/ngspice/files/ng-spice-rework/45/ngspice-45.tar.gz
+$ tar -zxvf ngspice-45.tar.gz
+$ cd ngspice-45
+$ mkdir release && cd release
+$ ../configure --with-x --with-readline=yes --disable-debug
+$ make
+$ sudo make install
+```
+<img width="938" height="384" alt="Screenshot 2025-09-19 041709" src="https://github.com/user-attachments/assets/659434ff-dd83-4756-8fab-5251cdbd5f47" />
+
+
+### 5. Magic VLSI (Layout Tool)
+
+```bash
+$ sudo apt-get install m4 tcsh csh libx11-dev tcl-dev tk-dev \
+    libcairo2-dev mesa-common-dev libglu1-mesa-dev libncurses-dev
+$ git clone https://github.com/RTimothyEdwards/magic
+$ cd magic
+$ ./configure
+$ make
+$ sudo make install
+```
+<img width="946" height="1079" alt="Screenshot 2025-09-19 041639" src="https://github.com/user-attachments/assets/7f2aceb1-d395-413f-abcb-7cd485551977" />
+
+### 6. OpenLane (RTL to GDSII Flow)
+
+```bash
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt install -y build-essential python3 python3-venv python3-pip make git
+$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o \
+    /usr/share/keyrings/docker-archive-keyring.gpg
+
+$ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
+    https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+$ sudo apt update
+$ sudo apt install docker-ce docker-ce-cli containerd.io
+
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+$ newgrp docker
+$ docker run hello-world
+```
+
+Install OpenLane:
+
+```bash
+$ cd $HOME
+$ git clone https://github.com/The-OpenROAD-Project/OpenLane
+$ cd OpenLane
+$ make
+($ make test)
+$ docker run --rm \
+    -v $(pwd):/openlane \
+    -v $PDK_ROOT:$PDK_ROOT \
+    -e PDK_ROOT=$PDK_ROOT \
+    -u $(id -u):$(id -g) \
+    efabless/openlane:latest \
+    ./flow.tcl -design spm -tag mytest -overwrite
+
+```
+ <img width="949" height="646" alt="image" src="https://github.com/user-attachments/assets/8246f1da-d952-45e7-b207-856fd3ce5dc3" />
+
 
 ## 📌 Author
 
@@ -95,3 +165,7 @@ $ sudo apt install gtkwave
 4th Year, Electronics & Communication Engineering
 JSS Academy of Technical Education, Noida
 mail: hirdeshpamani2@gmail.com
+
+
+
+
